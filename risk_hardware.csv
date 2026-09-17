@@ -1,0 +1,10 @@
+metric,value
+Total FAILED jobs,18587.0
+Jobs that hit scheduler-recorded node failure,31.0
+Scheduler-recorded lost GPU-hours,7772.07
+Scheduler-recorded loss USD,19430.18
+Silent faulty nodes detected,1.0
+Silent-fault failed jobs,140.0
+Silent-fault total jobs,144.0
+Silent-fault lost GPU-hours,76.62
+Silent-fault loss USD,191.55

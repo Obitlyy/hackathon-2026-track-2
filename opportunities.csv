@@ -1,0 +1,4 @@
+opportunity,jobs,gpu_hours,share_pct,usd,action
+High-confidence unused capacity,2151,111572.37,18.78,278930.93,Move CPU-suitable jobs off GPUs; idle timeout; earlier cancellation
+Completed right-sizing candidates,20,8959.81,1.5083757704026348,22399.52,Reduce GPU allocation; shared/fractional GPU
+Zero-compute unsuccessful jobs,1459,81887.01,13.79,204717.53,Investigate timeout/failure/cancellation causes
