@@ -1,0 +1,137 @@
+{
+  "baseline": [
+    {
+      "state_name": "COMPLETED",
+      "jobs": 45334,
+      "gpu_hours": 229040.5717694444,
+      "share_pct": 38.5587695382,
+      "usd": 572601.4294236111
+    },
+    {
+      "state_name": "CANCELLED",
+      "jobs": 9290,
+      "gpu_hours": 203929.5760638889,
+      "share_pct": 34.3313565135,
+      "usd": 509823.9401597222
+    },
+    {
+      "state_name": "TIMEOUT",
+      "jobs": 1544,
+      "gpu_hours": 107951.5212083333,
+      "share_pct": 18.1735392792,
+      "usd": 269878.8030208334
+    },
+    {
+      "state_name": "FAILED",
+      "jobs": 18587,
+      "gpu_hours": 50033.1570611111,
+      "share_pct": 8.4230359603,
+      "usd": 125082.8926527778
+    },
+    {
+      "state_name": "NODE_FAIL",
+      "jobs": 10,
+      "gpu_hours": 2027.8908833333,
+      "share_pct": 0.3413935645,
+      "usd": 5069.7272083333
+    },
+    {
+      "state_name": "UNDECODED_11",
+      "jobs": 83,
+      "gpu_hours": 1021.1144,
+      "share_pct": 0.1719036698,
+      "usd": 2552.786
+    },
+    {
+      "state_name": "UNDECODED_1024",
+      "jobs": 1,
+      "gpu_hours": 0.0087583333,
+      "share_pct": 1.4745e-06,
+      "usd": 0.0218958333
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity": "High-confidence unused capacity",
+      "jobs": 2151,
+      "gpu_hours": 111572.37,
+      "share_pct": 18.78,
+      "usd": 278930.93,
+      "action": "Move CPU-suitable jobs off GPUs; idle timeout; earlier cancellation"
+    },
+    {
+      "opportunity": "Completed right-sizing candidates",
+      "jobs": 20,
+      "gpu_hours": 8959.81,
+      "share_pct": 1.5083757704,
+      "usd": 22399.52,
+      "action": "Reduce GPU allocation; shared/fractional GPU"
+    },
+    {
+      "opportunity": "Zero-compute unsuccessful jobs",
+      "jobs": 1459,
+      "gpu_hours": 81887.01,
+      "share_pct": 13.79,
+      "usd": 204717.53,
+      "action": "Investigate timeout/failure/cancellation causes"
+    }
+  ],
+  "rightsizing_summary": [
+    {
+      "group": "Low-util only",
+      "jobs": 6,
+      "gpu_hours": 3492.6831111111,
+      "usd_full_spend": 8731.7077777778
+    },
+    {
+      "group": "Memory oversized only",
+      "jobs": 6,
+      "gpu_hours": 2153.4269444444,
+      "usd_full_spend": 5383.5673611111
+    },
+    {
+      "group": "Both signals",
+      "jobs": 8,
+      "gpu_hours": 3313.6991666667,
+      "usd_full_spend": 8284.2479166667
+    }
+  ],
+  "risk_hardware": [
+    {
+      "metric": "Total FAILED jobs",
+      "value": 18587.0
+    },
+    {
+      "metric": "Jobs that hit scheduler-recorded node failure",
+      "value": 31.0
+    },
+    {
+      "metric": "Scheduler-recorded lost GPU-hours",
+      "value": 7772.07
+    },
+    {
+      "metric": "Scheduler-recorded loss USD",
+      "value": 19430.18
+    },
+    {
+      "metric": "Silent faulty nodes detected",
+      "value": 1.0
+    },
+    {
+      "metric": "Silent-fault failed jobs",
+      "value": 140.0
+    },
+    {
+      "metric": "Silent-fault total jobs",
+      "value": 144.0
+    },
+    {
+      "metric": "Silent-fault lost GPU-hours",
+      "value": 76.62
+    },
+    {
+      "metric": "Silent-fault loss USD",
+      "value": 191.55
+    }
+  ]
+}

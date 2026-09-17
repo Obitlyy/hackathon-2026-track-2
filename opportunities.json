@@ -1,0 +1,26 @@
+[
+  {
+    "opportunity": "High-confidence unused capacity",
+    "jobs": 2151,
+    "gpu_hours": 111572.37,
+    "share_pct": 18.78,
+    "usd": 278930.93,
+    "action": "Move CPU-suitable jobs off GPUs; idle timeout; earlier cancellation"
+  },
+  {
+    "opportunity": "Completed right-sizing candidates",
+    "jobs": 20,
+    "gpu_hours": 8959.81,
+    "share_pct": 1.5083757704,
+    "usd": 22399.52,
+    "action": "Reduce GPU allocation; shared/fractional GPU"
+  },
+  {
+    "opportunity": "Zero-compute unsuccessful jobs",
+    "jobs": 1459,
+    "gpu_hours": 81887.01,
+    "share_pct": 13.79,
+    "usd": 204717.53,
+    "action": "Investigate timeout/failure/cancellation causes"
+  }
+]

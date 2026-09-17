@@ -1,0 +1,38 @@
+[
+  {
+    "metric": "Total FAILED jobs",
+    "value": 18587.0
+  },
+  {
+    "metric": "Jobs that hit scheduler-recorded node failure",
+    "value": 31.0
+  },
+  {
+    "metric": "Scheduler-recorded lost GPU-hours",
+    "value": 7772.07
+  },
+  {
+    "metric": "Scheduler-recorded loss USD",
+    "value": 19430.18
+  },
+  {
+    "metric": "Silent faulty nodes detected",
+    "value": 1.0
+  },
+  {
+    "metric": "Silent-fault failed jobs",
+    "value": 140.0
+  },
+  {
+    "metric": "Silent-fault total jobs",
+    "value": 144.0
+  },
+  {
+    "metric": "Silent-fault lost GPU-hours",
+    "value": 76.62
+  },
+  {
+    "metric": "Silent-fault loss USD",
+    "value": 191.55
+  }
+]
