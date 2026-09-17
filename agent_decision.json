@@ -1,0 +1,134 @@
+{
+  "executive_summary": {
+    "target_cut_pct": 20.0,
+    "target_gpu_hours": 118800.77,
+    "current_conservative_gpu_hours": 30335.36,
+    "current_conservative_capacity_pct": 5.11,
+    "remaining_gap_gpu_hours": 88465.4,
+    "remaining_gap_capacity_pct": 14.89,
+    "recommended_decision": "Pilot conservative multi-GPU right-sizing first; investigate zero-utilization jobs separately; do not use a blanket 20% cut."
+  },
+  "ranked_decisions": [
+    {
+      "rank": 1,
+      "decision": "PILOT_RIGHT_SIZE_MULTI_GPU",
+      "action": "Pilot reducing selected sustained low-utilization multi-GPU jobs by one GPU.",
+      "owner": "ML Platform / SRE",
+      "confidence": "MEDIUM",
+      "risk": "MEDIUM",
+      "expected_gpu_hours_saved": 30335.36,
+      "expected_capacity_saved_pct": 5.11,
+      "exposure_if_wrong_gpu_hours": 85944.09,
+      "why": "1,496 jobs across 88 researchers match the prototype rule. The scenario removes only one GPU per flagged job rather than deleting the job.",
+      "validation_gate": "Run a small pilot first. Compare completion rate and runtime against similar historical jobs. Stop if research performance materially worsens."
+    },
+    {
+      "rank": 2,
+      "decision": "INVESTIGATE_ZERO_UTIL",
+      "action": "Investigate 0%-average-utilization jobs before counting them as savings.",
+      "owner": "Research Computing / SRE",
+      "confidence": "LOW",
+      "risk": "HIGH",
+      "expected_gpu_hours_saved": 0.0,
+      "expected_capacity_saved_pct": 0.0,
+      "exposure_if_wrong_gpu_hours": 147547.06,
+      "why": "25,888 jobs account for 147,547.06 GPU-hours, but zero average utilization alone does not prove the allocation was unnecessary.",
+      "validation_gate": "Check completion state, failure mode, job type, repeat behavior and official Track-2 rules before converting any of these hours into a savings claim."
+    },
+    {
+      "rank": 3,
+      "decision": "NO_BLANKET_CUT",
+      "action": "Do not impose the remaining 20% target as a blanket GPU cut.",
+      "owner": "CFO + ML Platform + SRE",
+      "confidence": "HIGH",
+      "risk": "HIGH",
+      "expected_gpu_hours_saved": 0.0,
+      "expected_capacity_saved_pct": 0.0,
+      "exposure_if_wrong_gpu_hours": 88465.4,
+      "why": "The conservative scenario covers only 5.11% of total GPU-hours. The remaining gap is 14.89% of capacity and needs additional validated opportunities.",
+      "validation_gate": "Add only evidence-backed rules with job-level drill-down before counting them toward the CFO target."
+    }
+  ],
+  "top_targets": [
+    {
+      "researcher_id": "18244851899",
+      "flagged_jobs": 56,
+      "gpu_hours_under_review": 5043.23,
+      "conservative_recoverable_gpu_hours": 2521.61,
+      "avg_gpu_util_pct": 0.17,
+      "estimated_savings_usd": null
+    },
+    {
+      "researcher_id": "12626134553",
+      "flagged_jobs": 13,
+      "gpu_hours_under_review": 4927.57,
+      "conservative_recoverable_gpu_hours": 2463.79,
+      "avg_gpu_util_pct": 0.0,
+      "estimated_savings_usd": null
+    },
+    {
+      "researcher_id": "35472743233",
+      "flagged_jobs": 115,
+      "gpu_hours_under_review": 4741.71,
+      "conservative_recoverable_gpu_hours": 2370.85,
+      "avg_gpu_util_pct": 0.6,
+      "estimated_savings_usd": null
+    },
+    {
+      "researcher_id": "66934479421",
+      "flagged_jobs": 45,
+      "gpu_hours_under_review": 3195.19,
+      "conservative_recoverable_gpu_hours": 1597.6,
+      "avg_gpu_util_pct": 0.46,
+      "estimated_savings_usd": null
+    },
+    {
+      "researcher_id": "53407250664",
+      "flagged_jobs": 3,
+      "gpu_hours_under_review": 5383.84,
+      "conservative_recoverable_gpu_hours": 1345.96,
+      "avg_gpu_util_pct": 0.83,
+      "estimated_savings_usd": null
+    },
+    {
+      "researcher_id": "50918076216",
+      "flagged_jobs": 76,
+      "gpu_hours_under_review": 2606.18,
+      "conservative_recoverable_gpu_hours": 1303.09,
+      "avg_gpu_util_pct": 0.32,
+      "estimated_savings_usd": null
+    },
+    {
+      "researcher_id": "65757341095",
+      "flagged_jobs": 89,
+      "gpu_hours_under_review": 2481.48,
+      "conservative_recoverable_gpu_hours": 1240.74,
+      "avg_gpu_util_pct": 0.65,
+      "estimated_savings_usd": null
+    },
+    {
+      "researcher_id": "12951384228",
+      "flagged_jobs": 79,
+      "gpu_hours_under_review": 2315.22,
+      "conservative_recoverable_gpu_hours": 1157.61,
+      "avg_gpu_util_pct": 0.03,
+      "estimated_savings_usd": null
+    },
+    {
+      "researcher_id": "516431206",
+      "flagged_jobs": 17,
+      "gpu_hours_under_review": 2087.92,
+      "conservative_recoverable_gpu_hours": 1043.96,
+      "avg_gpu_util_pct": 3.29,
+      "estimated_savings_usd": null
+    },
+    {
+      "researcher_id": "58650034446",
+      "flagged_jobs": 30,
+      "gpu_hours_under_review": 2038.39,
+      "conservative_recoverable_gpu_hours": 1019.19,
+      "avg_gpu_util_pct": 0.32,
+      "estimated_savings_usd": null
+    }
+  ]
+}
